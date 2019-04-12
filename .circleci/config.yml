@@ -17,14 +17,11 @@ workflows:
   main:
     jobs:
       - build:
-          filters:
-            tags:
-              only: /^\d+\.\d+\.\d+$/
+  main2
+    jobs:
       - publish-github-release:
           requires:
             - build
           filters:
-            branches:
-              ignore: /.*/
             tags:
               only: /^\d+\.\d+\.\d+$/
