@@ -16,10 +16,10 @@ workflows:
     jobs:
       - build
   tagged-build:
+    requires:
+      - build
+    filters:
+      tags:
+        only: /^v.*/
     jobs:
-      requires:
-        - build
-       filters:
-          tags:
-            only: /^v.*/
-       - taged_behaviour
+      - taged_behaviour
