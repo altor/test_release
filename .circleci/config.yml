@@ -6,3 +6,20 @@ jobs:
     steps:
       - checkout # check out the code in the project directory
       - run: echo "hello world" # run the `echo` command
+  taged_behaviour:
+    steps:
+      - run: echo "c'est un truc tagué"
+
+workflows:
+  version: 2
+  untagged-build:
+    jobs:
+      - build
+  tagged-build:
+    jobs:
+      requires:
+        - build
+       filters:
+          tags:
+            only: /^v.*/
+       - taged_behaviour
