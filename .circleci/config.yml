@@ -14,10 +14,10 @@ jobs:
 
 workflows:
   version: 2
-  main:
+  untaged-build:
     jobs:
-      - build:
-  main2:
+      - build
+  taged-build:
     jobs:
       - publish-github-release:
           requires:
