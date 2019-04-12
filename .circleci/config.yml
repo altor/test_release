@@ -19,9 +19,16 @@ workflows:
       - build
   taged-build:
     jobs:
+      - build:
+          filters:
+            tags:
+              only: /^\d+\.\d+\.\d+$/
       - publish-github-release:
           requires:
             - build
           filters:
             tags:
               only: /^\d+\.\d+\.\d+$/
+
+
+
