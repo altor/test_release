@@ -17,11 +17,14 @@ workflows:
   version: 2
   main:
     jobs:
-      - build
-      # - publish-github-release:
-      #     filters:
-      #       tags:
-      #         only: 'v.*'
+      - build:
+        filters:
+	  tags:
+	    ignore: 'v.*'
+      - publish-github-release:
+          filters:
+            tags:
+              only: 'v.*'
 
 
 
