@@ -22,8 +22,8 @@ workflows:
     jobs:
       - publish-github-release:
           filters:
-            tags:'.*'
-
+            tags:
+              only: '.*'
 
 
 
