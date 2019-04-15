@@ -18,10 +18,10 @@ workflows:
   main:
     jobs:
       - build
-      - publish-github-release:
-          filters:
-            tags:
-              only: 'v.*'
+      # - publish-github-release:
+      #     filters:
+      #       tags:
+      #         only: 'v.*'
 
 
 
