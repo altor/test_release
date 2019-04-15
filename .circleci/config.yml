@@ -19,8 +19,8 @@ workflows:
     jobs:
       - build:
           filters:
-          tags:
-            ignore: 'v.*'
+            tags:
+              ignore: 'v.*'
       - publish-github-release:
           filters:
             tags:
