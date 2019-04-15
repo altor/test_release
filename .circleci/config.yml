@@ -23,6 +23,8 @@ workflows:
               ignore: /v.*/
       - publish-github-release:
           filters:
+            branches:
+              ignore: /.*/
             tags:
               only: /v.*/
 
