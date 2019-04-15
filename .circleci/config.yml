@@ -21,7 +21,7 @@ workflows:
       - publish-github-release:
           filters:
             tags:
-              only: '.*'
+              only: 'v.*'
 
 
 
