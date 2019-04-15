@@ -20,11 +20,11 @@ workflows:
       - build:
           filters:
             tags:
-              ignore: 'v.*'
+              ignore: /v.*/
       - publish-github-release:
           filters:
             tags:
-              only: 'v.*'
+              only: /v.*/
 
 
 
