@@ -15,11 +15,9 @@ jobs:
 
 workflows:
   version: 2
-  untaged-build:
+  main:
     jobs:
       - build
-  taged-build:
-    jobs:
       - publish-github-release:
           filters:
             tags:
