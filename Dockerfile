@@ -6,4 +6,4 @@ USER powerapi
 
 RUN pip3 install --user numpy
 
-ENTRYPOINT ["/bin/echo", "0.1"]
+ENTRYPOINT ["/bin/echo", "0.3"]
